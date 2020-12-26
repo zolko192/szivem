@@ -2,4 +2,4 @@
 
 git commit -m "uj info"
 git add --all
-git push
+git push origin master
