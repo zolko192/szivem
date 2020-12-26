@@ -1,10 +1,32 @@
 <!DOCTYPE html>
 <html lang="hu">
-  <head>
-    <meta charset='utf-8'>
-    <title>Saját</title>
-  </head>
+<head>
+  <meta charset='utf-8'>
+  <title>Saját</title>
+</head>
 <body>
-  <iframe width="400" height="300" src="https://www.youtube.com/embed/QnP1SEf4rDc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>">
+  <div style="text-align:center"> 
+  <button onclick="playPause()">Play/Pause</button> 
+  <button onclick="makeNormal()">Normal</button>
+  <br><br>
+  <iframe id = "video1" width="853" height="480" src="https://www.youtube.com/embed/QnP1SEf4rDc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div> 
+
+<script> 
+var myVideo = document.getElementById("video1"); 
+
+function playPause() { 
+  if (myVideo.paused) 
+    myVideo.play();
+    myVideo.after();
+  else 
+    myVideo.pause(); 
+} 
+
+function makeNormal() { 
+  myVideo.width = 300;
+  myVideo.height = 300;
+} 
+</script>
 </body>
 </html>
